@@ -1,8 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <iostream>
-#include <semaphore.h>
-
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -10,11 +7,19 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // Setando o valor inicial da velocidade dos trens
+    ui->horizontalSlider_trem_1->setValue(10);
+    ui->horizontalSlider_trem_2->setValue(10);
+    ui->horizontalSlider_trem_3->setValue(10);
+    ui->horizontalSlider_trem_4->setValue(10);
+    ui->horizontalSlider_trem_5->setValue(10);
+
     //Cria o trem com seu (ID, posição X, posição Y)
-    trem1 = new Trem(1,200,230);
-    //trem1->inicilizaSem();
-    trem2 = new Trem(2,470,230);
-    trem3 = new Trem(3,70,110);
+    trem1 = new Trem(1,60,80);
+    trem2 = new Trem(2,460,30);
+    trem3 = new Trem(3,870,90);
+    trem4 = new Trem(4,290,280);
+    trem5 = new Trem(5,570,280);
 
     /*
      * Conecta o sinal UPDATEGUI à função UPDATEINTERFACE.
@@ -26,27 +31,32 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(trem1,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
     connect(trem2,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
     connect(trem3,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
-
-
-
+    connect(trem4,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
+    connect(trem5,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
 }
 
 //Função que será executada quando o sinal UPDATEGUI for emitido
 void MainWindow::updateInterface(int id, int x, int y){
     switch(id){
     case 1: //Atualiza a posição do objeto da tela (quadrado) que representa o trem1
+        trem1->setVelocidade(ui->horizontalSlider_trem_1->value());
         ui->label_trem1->setGeometry(x,y,21,17);
-        /*if(trem3->getY()==230){
-            if(trem3->getX() < 340 && trem3->getX() == trem1->getX()-10){
-                trem3->terminate();
-            }
-        }*/
         break;
     case 2: //Atualiza a posição do objeto da tela (quadrado) que representa o trem2
+        trem2->setVelocidade(ui->horizontalSlider_trem_2->value());
         ui->label_trem2->setGeometry(x,y,21,17);
         break;
     case 3: //Atualiza a posição do objeto da tela (quadrado) que representa o trem3
+        trem3->setVelocidade(ui->horizontalSlider_trem_3->value());
         ui->label_trem3->setGeometry(x,y,21,17);
+        break;
+    case 4: //Atualiza a posição do objeto da tela (quadrado) que representa o trem4
+        trem4->setVelocidade(ui->horizontalSlider_trem_4->value());
+        ui->label_trem4->setGeometry(x,y,21,17);
+        break;
+    case 5: //Atualiza a posição do objeto da tela (quadrado) que representa o trem5
+        trem5->setVelocidade(ui->horizontalSlider_trem_5->value());
+        ui->label_trem5->setGeometry(x,y,21,17);
         break;
     default:
         break;
@@ -64,8 +74,10 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     trem1->start();
-    trem2->start();
+    trem2->start();    
     trem3->start();
+    trem4->start();
+    trem5->start();
 }
 
 /*
@@ -76,36 +88,6 @@ void MainWindow::on_pushButton_2_clicked()
     trem1->terminate();
     trem2->terminate();
     trem3->terminate();
-}
-
-
-/* Controla a velocidade do Trem 1 */
-void MainWindow::on_horizontalSlider_valueChanged(int value)
-{
-    if(value != 100){
-        trem1->setVelocidade(value);
-    }else{
-        trem1->terminate();
-    }
-    ui->progressBar->setValue(value); // apenas para mostrar a velocidade
-}
-
-/* Controla a velocidade do Trem 2 */
-void MainWindow::on_horizontalSlider_2_valueChanged(int value)
-{
-    if(value != 100){
-        trem2->setVelocidade(value);
-    }else{
-        trem2->terminate();
-    }
-}
-
-/* Controla a velocidade do Trem 3 */
-void MainWindow::on_horizontalSlider_3_valueChanged(int value)
-{
-    if(value != 100){
-        trem3->setVelocidade(value);
-    }else{
-        trem3->terminate();
-    }
+    trem4->terminate();
+    trem5->terminate();
 }
