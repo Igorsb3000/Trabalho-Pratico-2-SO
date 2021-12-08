@@ -47,8 +47,8 @@ void Trem::run()
             // Quero entrar na Via 1
             if (x == 310 && y == 30){
                 semaforo6.acquire();
-                semaforo1.acquire();
                 semaforo6.release();
+                semaforo1.acquire();
             }
 
             // Quero sair da Via 1 entrar na Via 4
@@ -83,15 +83,15 @@ void Trem::run()
             // Na porta de saída para entrar na VIA 2
             if (x == 580 && y == 30){
                 semaforo3.acquire();
-                semaforo2.acquire();
                 semaforo3.release();
+                semaforo2.acquire();
             }
 
             // Quero sair da Via 2 e entrar na Via 7
             if (x ==  600 && y == 130){
                 semaforo5.acquire();
-                semaforo7.acquire();
                 semaforo5.release();
+                semaforo7.acquire();
             }
 
             // Estou na Via 7 e vou liberar a Via 2
@@ -101,6 +101,8 @@ void Trem::run()
 
             // Quero sair da Via 7 e entrar na Via 6
             if (x == 460 && y == 150){
+                semaforo4.acquire();
+                semaforo4.release();
                 semaforo6.acquire();
             }
 
@@ -142,8 +144,8 @@ void Trem::run()
             // Quero entrar na Via 3
             if (x ==  730 && y == 150){
                 semaforo2.acquire();
-                semaforo3.acquire();
                 semaforo2.release();
+                semaforo3.acquire();
             }
 
             // Estou na Via 3 e quero entrar na Via 2
@@ -181,8 +183,8 @@ void Trem::run()
                 semaforo1.acquire();
                 semaforo1.release();
                 semaforo5.acquire();
-                semaforo4.acquire();
                 semaforo5.release();
+                semaforo4.acquire();
             }
 
             // Estou na VIa 4 e quero entrar na Via 6
@@ -230,8 +232,8 @@ void Trem::run()
             // Quero entrar na Via 5
             if (x == 460 && y == 280){
                 semaforo7.acquire();
-                semaforo5.acquire();
                 semaforo7.release();
+                semaforo5.acquire();
             }
 
             // Estou na Via 5 e quero ir para a VIA 7
