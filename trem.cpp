@@ -43,18 +43,25 @@ void Trem::run()
         {
         case 1:
             //Trem 1
+
+            // Quero entrar na Via 1
             if (x == 310 && y == 30){
+                semaforo6.acquire();
                 semaforo1.acquire();
+                semaforo6.release();
             }
 
+            // Quero sair da Via 1 entrar na Via 4
             if (x ==  330 && y == 130){
                 semaforo4.acquire();
             }
 
+            // Sai da Via 1
             if (x == 310 && y == 150){
                 semaforo1.release();
             }
 
+            // Sai da Via 4
             if (x ==  150 && y == 150){
                 semaforo4.release();
             }
@@ -75,12 +82,16 @@ void Trem::run()
         case 2: //Trem 2
             // Na porta de saída para entrar na VIA 2
             if (x == 580 && y == 30){
+                semaforo3.acquire();
                 semaforo2.acquire();
+                semaforo3.release();
             }
 
             // Quero sair da Via 2 e entrar na Via 7
             if (x ==  600 && y == 130){
+                semaforo5.acquire();
                 semaforo7.acquire();
+                semaforo5.release();
             }
 
             // Estou na Via 7 e vou liberar a Via 2
@@ -130,7 +141,9 @@ void Trem::run()
 
             // Quero entrar na Via 3
             if (x ==  730 && y == 150){
+                semaforo2.acquire();
                 semaforo3.acquire();
+                semaforo2.release();
             }
 
             // Estou na Via 3 e quero entrar na Via 2
@@ -165,25 +178,33 @@ void Trem::run()
 
             // Quero entrar na Via 4
             if (x == 170 && y == 170){
+                semaforo1.acquire();
+                semaforo1.release();
+                semaforo5.acquire();
                 semaforo4.acquire();
+                semaforo5.release();
             }
 
             // Estou na VIa 4 e quero entrar na Via 6
             if (x == 310 && y == 150){
-                semaforo2.acquire();
                 semaforo6.acquire();
             }
 
             // Deixei a Via 4 e estou na Via 6
             if (x == 350 && y == 150){
                 semaforo4.release();
-                semaforo2.release();
             }
 
             // Estou na VIa 6 e quero entrar na Via 5
             if (x == 420 && y == 150){
                 semaforo5.acquire();
             }
+
+            // Estou deixando a Via 6
+            if (x == 440 && y == 170){
+                semaforo6.release();
+            }
+
 
             // Estou deixando a via 5
             if (x == 420 && y == 280){
@@ -208,7 +229,9 @@ void Trem::run()
 
             // Quero entrar na Via 5
             if (x == 460 && y == 280){
+                semaforo7.acquire();
                 semaforo5.acquire();
+                semaforo7.release();
             }
 
             // Estou na Via 5 e quero ir para a VIA 7
@@ -226,9 +249,14 @@ void Trem::run()
                 semaforo3.acquire();
             }
 
+            // Entrei na Via 3 e Liberei a Via 7
+            if(x == 620 && y == 150){
+                semaforo7.release();
+            }
+
             // Deixando a Via 3
             if(x == 710 && y == 170){
-                semaforo3.acquire();
+                semaforo3.release();
             }
 
             // Movimentação do TREM 5
