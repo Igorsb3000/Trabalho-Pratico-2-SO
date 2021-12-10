@@ -23,7 +23,7 @@ void Trem::setVelocidade(int velocidade)
 {
     if (velocidade <= 0)
     {
-        this->velocidade = 100;
+        this->velocidade = 0;
         return;
     }
     this->velocidade = (int)1000 / velocidade;
