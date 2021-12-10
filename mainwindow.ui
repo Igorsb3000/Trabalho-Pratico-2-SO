@@ -17,7 +17,7 @@
    <widget class="QLabel" name="label_trem1">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>200</x>
       <y>30</y>
       <width>21</width>
       <height>17</height>
@@ -86,8 +86,8 @@
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>204</red>
-          <green>0</green>
+          <red>255</red>
+          <green>255</green>
           <blue>0</blue>
          </color>
         </brush>
@@ -160,15 +160,15 @@
          <color alpha="255">
           <red>255</red>
           <green>255</green>
-          <blue>255</blue>
+          <blue>0</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>204</red>
-          <green>0</green>
+          <red>255</red>
+          <green>255</green>
           <blue>0</blue>
          </color>
         </brush>
@@ -232,8 +232,8 @@
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>204</red>
-          <green>0</green>
+          <red>255</red>
+          <green>255</green>
           <blue>0</blue>
          </color>
         </brush>
@@ -306,15 +306,15 @@
          <color alpha="255">
           <red>255</red>
           <green>255</green>
-          <blue>255</blue>
+          <blue>0</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>204</red>
-          <green>0</green>
+          <red>255</red>
+          <green>255</green>
           <blue>0</blue>
          </color>
         </brush>
@@ -378,8 +378,8 @@
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>204</red>
-          <green>0</green>
+          <red>255</red>
+          <green>255</green>
           <blue>0</blue>
          </color>
         </brush>
@@ -450,8 +450,8 @@
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>204</red>
-          <green>0</green>
+          <red>255</red>
+          <green>255</green>
           <blue>0</blue>
          </color>
         </brush>
@@ -459,8 +459,8 @@
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>204</red>
-          <green>0</green>
+          <red>255</red>
+          <green>255</green>
           <blue>0</blue>
          </color>
         </brush>
@@ -617,7 +617,7 @@
     <property name="geometry">
      <rect>
       <x>460</x>
-      <y>150</y>
+      <y>30</y>
       <width>21</width>
       <height>17</height>
      </rect>
@@ -777,7 +777,7 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>150</y>
+      <y>280</y>
       <width>21</width>
       <height>17</height>
      </rect>
@@ -792,8 +792,8 @@
    <widget class="QLabel" name="label_trem5">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>170</y>
+      <x>570</x>
+      <y>280</y>
       <width>21</width>
       <height>16</height>
      </rect>
