@@ -84,11 +84,13 @@ void Trem::run()
             if (x == 580 && y == 30){
                 semaforo3.acquire();
                 semaforo3.release();
+                semaforo7.acquire(); //aparentemente resolveu o deadlock dos trens 2, 3 e 5
+                semaforo7.release();
                 semaforo2.acquire();
             }
 
             // Quero sair da Via 2 e entrar na Via 7
-            if (x ==  600 && y == 130){
+            if (x ==  600 && y == 130){ //deadlock
                 semaforo5.acquire();
                 semaforo5.release();
                 semaforo7.acquire();
@@ -142,7 +144,7 @@ void Trem::run()
         case 3: //Trem 3
 
             // Quero entrar na Via 3
-            if (x ==  730 && y == 150){
+            if (x ==  730 && y == 150){ //deadlock
                 semaforo2.acquire();
                 semaforo2.release();
                 semaforo3.acquire();
@@ -180,7 +182,7 @@ void Trem::run()
 
             // Quero entrar na Via 4
             if (x == 170 && y == 170){
-                semaforo1.acquire();
+                semaforo1.acquire(); // acho que o trem 4 travou aqui
                 semaforo1.release();
                 semaforo5.acquire();
                 semaforo5.release();

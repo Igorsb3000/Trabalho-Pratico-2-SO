@@ -14,7 +14,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
@@ -31,8 +30,6 @@ public:
     QLabel *label_trilho2;
     QLabel *label_trilho3;
     QLabel *label_trilho4;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
     QLabel *label_trilho7;
     QLabel *label_trilho5;
     QLabel *label_trilho6;
@@ -163,12 +160,6 @@ public:
         label_trilho4->setObjectName(QString::fromUtf8("label_trilho4"));
         label_trilho4->setGeometry(QRect(60, 30, 21, 137));
         label_trilho4->setStyleSheet(QString::fromUtf8("QLabel { background: yellow}"));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(190, 390, 99, 27));
-        pushButton_2 = new QPushButton(centralWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(620, 390, 98, 27));
         label_trilho7 = new QLabel(centralWidget);
         label_trilho7->setObjectName(QString::fromUtf8("label_trilho7"));
         label_trilho7->setGeometry(QRect(600, 30, 21, 137));
@@ -281,7 +272,7 @@ public:
 "    background: orange;\n"
 "}"));
         horizontalSlider_trem_5->setMinimum(0);
-        horizontalSlider_trem_5->setMaximum(200);
+        horizontalSlider_trem_5->setMaximum(100);
         horizontalSlider_trem_5->setOrientation(Qt::Horizontal);
         horizontalSlider_trem_5->setInvertedAppearance(false);
         horizontalSlider_trem_5->setInvertedControls(false);
@@ -291,8 +282,6 @@ public:
         label_trilho3->raise();
         label_trilho4->raise();
         label_trem1->raise();
-        pushButton->raise();
-        pushButton_2->raise();
         label_trilho7->raise();
         label_trilho5->raise();
         label_trilho6->raise();
@@ -337,8 +326,6 @@ public:
         label_trilho2->setText(QString());
         label_trilho3->setText(QString());
         label_trilho4->setText(QString());
-        pushButton->setText(QApplication::translate("MainWindow", "Ligar", nullptr));
-        pushButton_2->setText(QApplication::translate("MainWindow", "Parar", nullptr));
         label_trilho7->setText(QString());
         label_trilho5->setText(QString());
         label_trilho6->setText(QString());
