@@ -539,32 +539,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>390</y>
-      <width>99</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ligar</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>390</y>
-      <width>98</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Parar</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_trilho7">
     <property name="geometry">
      <rect>
@@ -823,7 +797,7 @@
      <number>0</number>
     </property>
     <property name="maximum">
-     <number>100</number>
+     <number>200</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -853,7 +827,7 @@
      <number>0</number>
     </property>
     <property name="maximum">
-     <number>100</number>
+     <number>200</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -883,7 +857,7 @@
      <number>0</number>
     </property>
     <property name="maximum">
-     <number>100</number>
+     <number>200</number>
     </property>
     <property name="value">
      <number>0</number>
@@ -916,7 +890,7 @@
      <number>0</number>
     </property>
     <property name="maximum">
-     <number>100</number>
+     <number>200</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -963,8 +937,6 @@
    <zorder>label_trilho3</zorder>
    <zorder>label_trilho4</zorder>
    <zorder>label_trem1</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_2</zorder>
    <zorder>label_trilho7</zorder>
    <zorder>label_trilho5</zorder>
    <zorder>label_trilho6</zorder>
