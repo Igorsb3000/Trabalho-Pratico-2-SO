@@ -9,6 +9,8 @@ QSemaphore semaforo5(1);
 QSemaphore semaforo6(1);
 QSemaphore semaforo7(1);
 
+
+
 //Construtor
 Trem::Trem(int ID, int x, int y)
 {
@@ -24,6 +26,7 @@ void Trem::setVelocidade(int velocidade)
     if (velocidade <= 0)
     {
         this->velocidade = 0;
+        //~QSemaphore(semaforo1);
         return;
     }
     this->velocidade = (int)1000 / velocidade;
@@ -280,4 +283,13 @@ void Trem::run()
         }
         msleep(velocidade);
     }
+
+}
+
+void Trem::destruindo_semaforos(){
+    semaforo1.~QSemaphore();
+    semaforo2.~QSemaphore();
+    semaforo3.~QSemaphore();
+    semaforo4.~QSemaphore();
+    semaforo5.~QSemaphore();
 }

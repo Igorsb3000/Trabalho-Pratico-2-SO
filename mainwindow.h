@@ -20,7 +20,6 @@ public:
 public slots:
     void updateInterface(int,int,int);
 
-
 private:
     Ui::MainWindow *ui;
 
