@@ -272,7 +272,7 @@ public:
 "    background: orange;\n"
 "}"));
         horizontalSlider_trem_5->setMinimum(0);
-        horizontalSlider_trem_5->setMaximum(100);
+        horizontalSlider_trem_5->setMaximum(200);
         horizontalSlider_trem_5->setOrientation(Qt::Horizontal);
         horizontalSlider_trem_5->setInvertedAppearance(false);
         horizontalSlider_trem_5->setInvertedControls(false);

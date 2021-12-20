@@ -71,16 +71,5 @@ void MainWindow::updateInterface(int id, int x, int y){
 
 MainWindow::~MainWindow()
 {
-    printf("Finalizando o programa e destruindo as QThreas e QSemaphores\n");
-    //Destruindo as Qthreads
-    trem1->terminate();
-    trem2->terminate();
-    trem3->terminate();
-    trem4->terminate();
-    trem5->terminate();
-
-    //Destruindo os QSemaphores
-    trem1->destruindo_semaforos();
-
     delete ui;
 }

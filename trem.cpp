@@ -286,10 +286,3 @@ void Trem::run()
 
 }
 
-void Trem::destruindo_semaforos(){
-    semaforo1.~QSemaphore();
-    semaforo2.~QSemaphore();
-    semaforo3.~QSemaphore();
-    semaforo4.~QSemaphore();
-    semaforo5.~QSemaphore();
-}
